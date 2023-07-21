@@ -1,5 +1,5 @@
 import { FlatfileListener } from "@flatfile/listener";
-import api, { Flatfile } from "@flatfile/api";
+import api from "@flatfile/api";
 
 async function submit(jobId: string) {
   try {
@@ -24,7 +24,7 @@ async function submit(jobId: string) {
   }
 }
 
-async function joinFields(jobId: string, sheetId: string) {
+async function joinFields(jobId: string) {
   try {
     await api.jobs.ack(jobId, {
       info: "I'm starting the joining fields job",
@@ -40,7 +40,6 @@ async function joinFields(jobId: string, sheetId: string) {
       record.values["full_name"].value = fullName;
       return record;
     });
-
     await api.records.update(sheetId, recordsUpdates as Flatfile.Record_[]);
   } catch (e) {
     throw new Error(`Error updating records`);
@@ -65,7 +64,7 @@ export const listener = FlatfileListener.create((client) => {
     { payload: { operation: "contacts:join-fields" } },
     async (event: any) => {
       const { context } = event;
-      return joinFields(context.jobId, context.sheetId);
+      return joinFields(context.jobId);
     }
   );
 
