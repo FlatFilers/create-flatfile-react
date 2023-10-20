@@ -6,6 +6,13 @@ module.exports = function override(config) {
     stream: require.resolve("stream-browserify"),
     assert: require.resolve("assert"),
     zlib: require.resolve("browserify-zlib"),
+    os: false,
+    tty: false,
+    url: false,
+    http: false,
+    https: false,
+    path: false,
+    fs: false
   });
   config.resolve.fallback = fallback;
   config.plugins = (config.plugins || []).concat([
