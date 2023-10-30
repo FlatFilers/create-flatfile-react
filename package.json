@@ -6,7 +6,7 @@
     "@flatfile/api": "^1.5.33",
     "@flatfile/listener": "0.3.15",
     "@flatfile/plugin-record-hook": "^1.1.7",
-    "@flatfile/react": "^7.2.29",
+    "@flatfile/react": "^7.2.30",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^13.5.0",
