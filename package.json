@@ -6,7 +6,7 @@
     "@flatfile/api": "^1.5.33",
     "@flatfile/listener": "0.3.15",
     "@flatfile/plugin-record-hook": "^1.1.7",
-    "@flatfile/react": "^7.2.28",
+    "@flatfile/react": "^7.2.29",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^13.5.0",
@@ -16,9 +16,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
-    "test": "react-app-rewired test",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -38,13 +38,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "assert": "^2.1.0",
-    "browserify-zlib": "^0.2.0",
-    "buffer": "^6.0.3",
-    "process": "^0.11.10",
-    "react-app-rewired": "^2.2.1",
-    "stream-browserify": "^3.0.0"
   }
 }
