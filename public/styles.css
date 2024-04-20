@@ -5,27 +5,79 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background: #090b2b;
-  color: #fff;
+  background: #fff;
 }
 
 #root {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  flex-direction: column;
+}
+
+.success {
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text color */
+  padding: 10px; /* Some padding */
+  margin: 20px 0; /* Some space above and below */
+  text-align: center; /* Centered text */
+}
+
+
+.centered-sub-navigation {
+  text-align: center;
+}
+
+nav {
+  white-space: nowrap;
+  display: flex;
+}
+
+nav ul {
+  margin-bottom: 0;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav li a {
+  align-items: center;
+  color: rgb(9, 11, 43);
+  display: flex;
+  font-weight: 500;
+  transition: color 0.25s linear 0s;
+  white-space: nowrap;
+  cursor: pointer;
+  padding: 0.75rem;
+  line-height: 1;
+}
+
+nav li a:hover {
+  color: rgba(9, 11, 43, 0.8);
+}
+
+.menu {
+  background: #090b2b;
+  width: 100%;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0px;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid rgb(232, 237, 244);
 }
 
 .content {
   /* Adjust the width and height as needed */
-  width: 800px;
-  height: 200px;
-  padding: 0 20px 0 50px;
+  width: 1000px;
+  padding: 25px;
 }
 
 .contrast {
   padding: 10px;
-  margin: 10px 5px 0 0;
+  margin: 0 5px 0 0;
   border-radius: 4px;
   border: 0;
   font-weight: 600;
@@ -132,6 +184,45 @@ body {
 /* The description text you see in the close modal */
 .flatfile_modal-text {
   color: var(--ff-secondary-color) !important;
+}
+
+.main {
+  padding: 30px;
+  min-height: 100vh;
+}
+
+.main .space-contents {
+  width: 100% !important;
+}
+
+.description {
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  font-size: 0.85rem;
+  max-width: var(--max-width);
+  width: 100%;
+  z-index: 2;
+  font-family: var(--font-mono);
+}
+
+.description a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.description button {
+  position: relative;
+  margin: 0;
+  padding: 1rem;
+  background-color: rgba(var(--callout-rgb), 0.5);
+  border: 1px solid rgba(var(--callout-border-rgb), 0.3);
+  border-radius: var(--border-radius);
+  font-family: var(--font-mono);
+  cursor: pointer;
+  transition: 0.25s ease;
 }
 
 /* End style overrides for when you cancel out of the Flatfile modal */
