@@ -6,6 +6,10 @@ body {
   padding: 0;
   font-family: sans-serif;
   background: #fff;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
 }
 
 #root {
@@ -16,13 +20,13 @@ body {
 }
 
 .success {
-  background-color: #4CAF50; /* Green background */
-  color: white; /* White text color */
+  color: black; /* White text color */
   padding: 10px; /* Some padding */
   margin: 20px 0; /* Some space above and below */
   text-align: center; /* Centered text */
+  box-shadow: rgb(0, 0, 0) 8px 8px;
+  border: 2px solid black;
 }
-
 
 .centered-sub-navigation {
   text-align: center;
@@ -31,10 +35,15 @@ body {
 nav {
   white-space: nowrap;
   display: flex;
+  padding: 0 3rem;
+  border-bottom: 1px solid rgb(232, 237, 244);
 }
 
 nav ul {
-  margin-bottom: 0;
+  margin: 0;
+  padding: 0;
+  margin-left: -0.75rem;
+  overflow: hidden;
 }
 
 nav li {
@@ -43,30 +52,76 @@ nav li {
 
 nav li a {
   align-items: center;
-  color: rgb(9, 11, 43);
+  color: #999;
   display: flex;
-  font-weight: 500;
+  font-weight: 600;
   transition: color 0.25s linear 0s;
   white-space: nowrap;
   cursor: pointer;
-  padding: 0.75rem;
-  line-height: 1;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  padding: 0.875rem 0.75rem;
+  text-decoration: none;
+  position: relative;
 }
 
 nav li a:hover {
   color: rgba(9, 11, 43, 0.8);
 }
+nav li a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: black;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  transition: 0.25s ease;
+}
+
+nav li a.active {
+  color: black;
+}
+nav li a.active:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: black;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+}
+
+pre.inline {
+  display: inline-block;
+  background: rgb(239, 239, 239);
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin: 0;
+}
 
 .menu {
-  background: #090b2b;
   width: 100%;
-  padding: 25px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 1rem 0px;
+  max-width: 92rem;
+  padding-left: 3rem;
+  padding: 0px;
   background-color: rgb(255, 255, 255);
+}
+
+.top-menu {
   border-bottom: 1px solid rgb(232, 237, 244);
+  padding: 1rem 3rem;
+}
+.border-space {
+  border-bottom: 1px solid rgb(232, 237, 244);
+  padding: 1rem 0;
+}
+.top-menu img {
+  height: 1.75rem;
 }
 
 .content {
@@ -77,11 +132,38 @@ nav li a:hover {
 
 .contrast {
   padding: 10px;
-  margin: 0 5px 0 0;
+  margin-right: 5px;
   border-radius: 4px;
   border: 0;
   font-weight: 600;
   cursor: pointer;
+}
+
+.flatfile-button {
+  background: rgb(59, 47, 201);
+  color: white;
+  border-radius: 0;
+  border: 0;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 10px 30px 10px 15px;
+  position: relative;
+  transition: 0.25s ease;
+}
+.flatfile-button .button-arrow {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 25px;
+  width: 5px;
+  transition: 0.25s ease;
+}
+.flatfile-button:hover {
+  background: rgba(59, 47, 201, 0.9);
+}
+.flatfile-button:hover .button-arrow {
+  transform: translateY(-50%) translateX(3px);
 }
 /* End of styles for home page */
 
@@ -223,6 +305,15 @@ nav li a:hover {
   font-family: var(--font-mono);
   cursor: pointer;
   transition: 0.25s ease;
+}
+
+.no-radius-iframe {
+  border-radius: 0!important;
+}
+
+a {
+  color: black;
+  font-weight: 600;
 }
 
 /* End style overrides for when you cancel out of the Flatfile modal */

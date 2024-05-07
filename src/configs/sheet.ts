@@ -15,6 +15,11 @@ export const sheet: Flatfile.SheetConfig = {
       label: "Last Name",
     },
     {
+      key: "color",
+      type: "string",
+      label: "Color",
+    },
+    {
       key: "email",
       type: "string",
       label: "Email",

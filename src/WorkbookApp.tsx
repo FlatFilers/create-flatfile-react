@@ -1,5 +1,6 @@
 import { FlatfileProvider, useFlatfile, Workbook } from "@flatfile/react";
 import { workbook } from "./configs/workbook";
+import Button from "./utils/Button";
 
 export const WorkbookApp = ({ publishableKey }: { publishableKey: string }) => {
   return (
@@ -15,16 +16,18 @@ const WorkbookConfig = () => {
   return (
     <div className="content">
       {/*Button to trigger the modal */}
-      <div className="centered-sub-navigation">
+      <div>
+      <h2>
+          The <pre className="inline">{`<Workbook />`}</pre> Component
+        </h2>
         <p>Embed a Flatfile Workbook in just a few lines of code.</p>
-        <button
-          className="contrast"
+        <Button
           onClick={() => {
             open ? closePortal() : openPortal();
           }}
         >
-          {open === true ? "Close" : "Open and create new"} Workbook
-        </button>
+          {open === true ? "Close" : "Open"} Portal
+        </Button>
       </div>
 
       <Workbook

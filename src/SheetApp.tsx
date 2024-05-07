@@ -5,6 +5,7 @@ import {
   useFlatfile,
 } from "@flatfile/react";
 import { sheet } from "./configs/sheet";
+import Button from "./utils/Button";
 
 export const SheetApp = ({ publishableKey }: { publishableKey: string }) => {
   return (
@@ -34,17 +35,19 @@ const SheetConfig = () => {
 
   return (
     <div className="content">
-      <div className="centered-sub-navigation">
+      <div>
+        <h2>
+          The <pre className="inline">{`<Sheet />`}</pre> Component
+        </h2>
         <p>Embed a Flatfile Sheet in just a few lines of code.</p>
         {/*Button to trigger the modal */}
-        <button
-          className="contrast"
+        <Button
           onClick={() => {
             open ? closePortal() : openPortal();
           }}
         >
-          {open === true ? "Close" : "Open and create new"} Sheet
-        </button>
+          {open === true ? "Close" : "Open"} Portal
+        </Button>
       </div>
 
       <Sheet
