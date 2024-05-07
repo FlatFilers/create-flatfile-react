@@ -16,18 +16,14 @@ import { sheet } from "./configs/sheet";
 import { workbook } from "./configs/workbook";
 import { document } from "./configs/document";
 
-export const SpaceApp = ({ publishableKey }: { publishableKey: string }) => {
-  return (
-    <FlatfileProvider
-      publishableKey={publishableKey}
-      config={{
-        displayAsModal: false,
-      }}
-    >
-      <SpaceConfig />
-    </FlatfileProvider>
-  );
-};
+export const SpaceApp = ({ publishableKey }: { publishableKey: string }) => (
+  <FlatfileProvider
+    publishableKey={publishableKey}
+    config={{ displayAsModal: false }}
+  >
+    <SpaceConfig />
+  </FlatfileProvider>
+);
 
 const SpaceConfig = () => {
   const { open, openPortal, closePortal } = useFlatfile();
