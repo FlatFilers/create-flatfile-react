@@ -115,7 +115,7 @@ const CheckPublishableKey = () => {
       </div>
       <hr />
       <div className="content">
-        <h2>Houston we have a problem.</h2>
+        <h2>Houston we have a problem...</h2>
         <p>
           Looks like you need to put in your{" "}
           <pre className="inline">publishable key</pre>. Sign in to your{" "}
