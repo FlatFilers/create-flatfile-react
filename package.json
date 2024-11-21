@@ -7,6 +7,7 @@
     "@flatfile/listener": "^1.0.2",
     "@flatfile/plugin-record-hook": "^1.5.0",
     "@flatfile/react": "^7.9.0",
+    "jest": "^27.5.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.3",
@@ -16,7 +17,8 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^6.4.2",
     "@testing-library/react": "^14.2.2",
-    "@testing-library/user-event": "^14.5.2"
+    "@testing-library/user-event": "^14.5.2",
+    "@types/jest": "^29.5.14"
   },
   "scripts": {
     "start": "react-scripts start",
